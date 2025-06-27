@@ -1,9 +1,7 @@
 import { nanoid } from "nanoid";
 import { z } from "zod";
 
-export const TaskIdSchema = z.object({
-  id: z.string().nanoid().brand<"TaskId">(),
-});
+export const TaskIdSchema = z.string().nanoid().brand<"TaskId">();
 
 export type TaskId = z.infer<typeof TaskIdSchema>;
 
@@ -12,5 +10,5 @@ export const isTaskId = (value: unknown): value is TaskId => {
 };
 
 export const createTaskId = (): TaskId => {
-  return TaskIdSchema.parse({ id: nanoid() });
+  return TaskIdSchema.parse(nanoid());
 };

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { TaskIdSchema, type TaskId } from "./TaskId";
+import { type TaskId, TaskIdSchema } from "./TaskId";
 
 export const DependencyTypeSchema = z.enum(["SS", "SF", "FS", "FF"]);
 

@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, mock } from "bun:test";
 import { createTask } from "./task";
-import { createTaskPoint } from "./value-objects/TaskPoint";
 import { parseTaskId } from "./value-objects/TaskId";
+import { createTaskPoint } from "./value-objects/TaskPoint";
 
 describe("Task", () => {
   beforeEach(() => {

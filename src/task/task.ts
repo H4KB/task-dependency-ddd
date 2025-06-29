@@ -1,7 +1,7 @@
 import { z } from "zod";
+import { type Dependency, DependencySchema } from "./value-objects/Dependency";
 import { createTaskId, TaskIdSchema } from "./value-objects/TaskId";
 import { TaskPointSchema } from "./value-objects/TaskPoint";
-import { DependencySchema, type Dependency } from "./value-objects/Dependency";
 
 export const TaskSchema = z.object({
   id: TaskIdSchema,
